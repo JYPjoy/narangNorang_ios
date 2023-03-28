@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
+        //chore: testing for git
         VStack {
             // switch
             Image(systemName: "globe")
