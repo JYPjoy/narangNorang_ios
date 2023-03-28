@@ -10,33 +10,44 @@ import SwiftUI
 struct Narangnorang_teamView: View {
     @State private var currentPosition: CGSize = .zero
     @State private var newPosition: CGSize = .zero
+    @State private var blendMode: Bool = true
+    @State private var scaleInOut = false
     
     var body: some View {
         ZStack{
             Image("team_narangnorang")
                 .resizable()
             ZStack {
-                //TODO: '나랑노랑' 버튼 클릭 - 이벤트로 도형 움직이게 처리
                 Rectangle()
-                Circle()
-                    .frame(width:300, height: 300)
-                    .foregroundColor(.yellow)
-                    .offset(x: self.currentPosition.width, y: self.currentPosition.height)
-                    .gesture(DragGesture()
-                        .onChanged { value in
-                            self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
+                
+                ZStack{
+                    Circle()
+                        .frame(width: 300, height: 300)
+                        .offset(x: self.currentPosition.width+200, y: self.currentPosition.height-150)
+                    
+                        .gesture(
+                            DragGesture()
+                                .onChanged { value in
+                                    self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
+                                }
+                                .onEnded { value in
+                                    self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
+                                    self.newPosition = self.currentPosition
+                                }
+                        )
+                        .onTapGesture {
+                            self.scaleInOut = true
                         }
-                        .onEnded { value in
-                            self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
-                            self.newPosition = self.currentPosition
-                        }
-                    )
-                    .blendMode(.destinationOut)
+                        .blendMode(.destinationOut)
+                }
+                .scaleEffect(scaleInOut ? 15: 1)
+                .animation(Animation.easeInOut.speed(1/8),value: scaleInOut)
             }
             .compositingGroup()
         }
         .ignoresSafeArea(.all, edges: [.bottom,.top])
     }
+    
 }
 
 struct Narangnorang_teamView_Previews: PreviewProvider {
