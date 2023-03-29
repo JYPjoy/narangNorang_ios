@@ -9,32 +9,46 @@ import SwiftUI
 
 struct IntroPageView: View {
     @State var typedText: String = ""
-    let completedText: String = "어느 야심한 금요일 저녁,\n션은 나홀로 메인랩에 방문했다."
+    @State var nextViewName : String = ""
+    let completedText: String = "어느 야심한 금요일 저녁,\n션은 나홀로 메인랩에 도착했다."
     
     var body: some View {
-        ZStack {
-            Rectangle().ignoresSafeArea()
-            
-            VStack(spacing: 40) {
-                Text(typedText)
-                    .foregroundColor(.white)
-                    .font(.system(size: 100))
-                Button {
-                    typingEffect()
-                } label: {
-                    Text("START")
-                        .font(.system(size: 80))
+        NavigationView{
+            ZStack {
+                Rectangle().ignoresSafeArea()
+                
+                VStack(spacing: 40) {
+                    
+                    Text(typedText)
                         .foregroundColor(.white)
-                        .padding(.horizontal, 100)
-                        .background(Color("buttonColor1")
-                            .cornerRadius(20)
-                        )
+                        .font(.system(size: 100))
+                    
+                    Button {
+                        typingEffect()
+                        nextViewName = "Narangnorang_teamView"
+                    } label: {
+                        Text("START")
+                            .font(.system(size: 80))
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 100)
+                            .background(Color("buttonColor1")
+                                .cornerRadius(20)
+                            )
+                    }
+                    
+                    NavigationLink {
+                        NextView(nextViewName: nextViewName)
+                    } label: {
+                        Text("다음으로")
+                            .font(.system(size: 30))
+                            .foregroundColor(.white)
+                    }
                 }
-
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
-    
+
     func typingEffect(at position: Int = 0) {
         if position == 0 {
             typedText = ""

@@ -14,38 +14,42 @@ struct Narangnorang_teamView: View {
     @State private var scaleInOut = false
     
     var body: some View {
-        ZStack{
-            Image("team_narangnorang")
-                .resizable()
-            ZStack {
-                Rectangle()
-                
-                ZStack{
-                    Circle()
-                        .frame(width: 300, height: 300)
-                        .offset(x: self.currentPosition.width+200, y: self.currentPosition.height-150)
+        NavigationView{
+            ZStack{
+                Image("team_narangnorang")
+                    .resizable()
+                ZStack {
+                    Rectangle()
                     
-                        .gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
-                                }
-                                .onEnded { value in
-                                    self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
-                                    self.newPosition = self.currentPosition
-                                }
-                        )
-                        .onTapGesture {
-                            self.scaleInOut = true
-                        }
-                        .blendMode(.destinationOut)
+                    ZStack{
+                        Circle()
+                            .frame(width: 300, height: 300)
+                            .offset(x: self.currentPosition.width+200, y: self.currentPosition.height-150)
+                        
+                            .gesture(
+                                DragGesture()
+                                    .onChanged { value in
+                                        self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
+                                    }
+                                    .onEnded { value in
+                                        self.currentPosition = CGSize(width: value.translation.width + self.newPosition.width, height: value.translation.height + self.newPosition.height)
+                                        self.newPosition = self.currentPosition
+                                    }
+                            )
+                            .onTapGesture {
+                                self.scaleInOut = true
+                            }
+                            .blendMode(.destinationOut)
+                    }
+                    .scaleEffect(scaleInOut ? 15: 1)
+                    .animation(Animation.easeInOut.speed(1/8),value: scaleInOut)
                 }
-                .scaleEffect(scaleInOut ? 15: 1)
-                .animation(Animation.easeInOut.speed(1/8),value: scaleInOut)
+                .compositingGroup()
             }
-            .compositingGroup()
+            .ignoresSafeArea(.all, edges: [.bottom,.top])
         }
-        .ignoresSafeArea(.all, edges: [.bottom,.top])
+        .navigationBarBackButtonHidden(true)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
 }
