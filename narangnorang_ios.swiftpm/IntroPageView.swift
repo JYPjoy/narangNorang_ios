@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct IntroPageView: View {
+    
     @State var typedText: String = ""
     @State var nextViewName : String = ""
     let completedText: String = "어느 야심한 금요일 저녁,\n션은 나홀로 메인랩에 도착했다."
@@ -25,7 +26,6 @@ struct IntroPageView: View {
                     
                     Button {
                         typingEffect()
-                        nextViewName = "Narangnorang_teamView"
                     } label: {
                         Text("START")
                             .font(.system(size: 80))
@@ -41,14 +41,21 @@ struct IntroPageView: View {
                     } label: {
                         Text("다음으로")
                             .font(.system(size: 30))
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
+                            .padding()
+                            .background(Color.white)
+                            .cornerRadius(10)
                     }
                 }
             }
+            .onAppear {
+                nextViewName = "Narangnorang_teamView"
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarBackButtonHidden(true)
     }
-
+    
     func typingEffect(at position: Int = 0) {
         if position == 0 {
             typedText = ""
