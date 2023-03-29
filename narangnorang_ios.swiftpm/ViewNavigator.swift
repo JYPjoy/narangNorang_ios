@@ -12,12 +12,52 @@ struct NextView: View {
     
     @ViewBuilder var body: some View {
         switch nextViewName {
-        case "IntroPageView":
-            IntroPageView()
-        case "TornPaperView":
-            TornPaperView()
-        case "Narangnorang_teamView":
-            Narangnorang_teamView()
+        case "SceneOneView":
+            SceneOneView()
+        case "SceneTwoView":
+            SceneTwoView()
+        case "SceneThreeView":
+            SceneThreeView()
+        case "SceneFourView":
+            SceneFourView()
+        case "SceneFiveView":
+            SceneFiveView()
+        case "SceneSixView":
+            SceneSixView()
+        case "SceneSevenView":
+            SceneSevenView()
+        case "SceneEightView":
+            SceneEightView()
+        case "SceneNineView":
+            SceneNineView()
+        case "SceneTenView":
+            SceneTenView()
+        case "SceneElevenView":
+            SceneElevenView()
+        case "SceneTwelveView":
+            SceneTwelveView()
+        case "SceneThirteenView":
+            SceneThirteenView()
+        case "SceneFourteenView":
+            SceneFourteenView()
+        case "SceneFifteenView":
+            SceneFifteenView()
+        case "SceneSixteenView":
+            SceneSixteenView()
+        case "SceneSeventeenView":
+            SceneSeventeenView()
+        case "SceneEighteenView":
+            SceneEighteenView()
+        case "SceneNineteenView":
+            SceneNineteenView()
+        case "SceneTwentyVView":
+            SceneTwentyView()
+        case "SceneTwentyOneView":
+            SceneTwentyOneView()
+        case "SceneTwentyTwoView":
+            SceneTwentyTwoView()
+        case "SceneTwentyThreeView":
+            SceneTwentyThreeView()
         default:
             IntroPageView()
         }
