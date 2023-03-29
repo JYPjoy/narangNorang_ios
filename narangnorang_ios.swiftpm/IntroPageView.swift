@@ -36,16 +36,16 @@ struct IntroPageView: View {
                             )
                     }
                     
-                    NavigationLink {
-                        NextView(nextViewName: nextViewName)
-                    } label: {
-                        Text("다음으로")
-                            .font(.system(size: 30))
-                            .foregroundColor(.black)
-                            .padding()
-                            .background(Color.white)
-                            .cornerRadius(10)
-                    }
+//                    NavigationLink {
+//                        NextView(nextViewName: nextViewName)
+//                    } label: {
+//                        Text("다음으로")
+//                            .font(.system(size: 30))
+//                            .foregroundColor(.black)
+//                            .padding()
+//                            .background(Color.white)
+//                            .cornerRadius(10)
+//                    }
                 }
             }
             .onAppear {

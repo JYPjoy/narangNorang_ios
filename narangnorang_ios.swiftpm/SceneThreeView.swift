@@ -9,13 +9,7 @@ import SwiftUI
 
 struct SceneThreeView: View {
     var body: some View {
-        NavigationView {
-            ZStack {
-                
-            }
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationViewStyle(StackNavigationViewStyle())
+        Text("Hello")
     }
 }
 
