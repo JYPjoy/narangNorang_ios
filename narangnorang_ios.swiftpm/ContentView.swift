@@ -5,10 +5,11 @@ struct ContentView: View {
         VStack {
             // switch
             // guggim
+            
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("GUGGIM")
         }
     }
 }
