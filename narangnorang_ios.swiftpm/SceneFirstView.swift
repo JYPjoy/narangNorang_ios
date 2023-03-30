@@ -10,9 +10,12 @@ import SwiftUI
 struct SceneFirstView: View {
         var body: some View {
             ZStack{
+                Rectangle()
+                    .ignoresSafeArea()
                 Image("main")
                     .resizable()
-                    .frame(width: 1250, height: 850)
+                    .scaledToFit()
+                   
                    
             }
 
