@@ -9,24 +9,18 @@ import SwiftUI
 
 enum Destination {
     case sceneOneView
-    case sceneTwoView
-    case sceneThreeView
-    case sceneFifteenView
-    case sceneSixteenView
+    case cafeteriaView
+    case secondQuizView
     
     @ViewBuilder
     var view: some View {
         switch self {
         case .sceneOneView:
             SceneOneView()
-        case .sceneTwoView:
-            SceneTwoView()
-        case .sceneThreeView:
-            SceneThreeView()
-        case .sceneFifteenView:
-            SceneFifteenView()
-        case .sceneSixteenView:
-            SceneSixteenView()
+        case .cafeteriaView:
+            CafeteriaView()
+        case .secondQuizView:
+            SecondQuizView()
         }
     }
 }
