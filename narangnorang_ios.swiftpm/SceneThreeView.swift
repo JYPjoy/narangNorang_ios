@@ -12,7 +12,7 @@ struct SceneThreeView: View {
             ZStack{
                 Image("LEEO(01)")
                     .resizable()
-                    .frame(width: 1200, height: 900)
+                    
                     .ignoresSafeArea()
             }
 
