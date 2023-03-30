@@ -10,12 +10,12 @@ import SwiftUI
 struct SceneFourView: View {
         var body: some View {
             ZStack{
-                Image("door")
+
+                Image("LEEO 02(01)")
                     .resizable()
-                    .frame(width: 1250, height: 850)
-                   // .scaleEffect(1.1)
-                   //.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    //.ignoresSafeArea()
+                    .ignoresSafeArea()
+                    
+                 
             }
 
     }
