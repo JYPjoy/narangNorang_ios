@@ -10,7 +10,9 @@ import SwiftUI
 struct MacView: View {
     var body: some View {
         ZStack{
-            Image("Mac_background").resizable().frame(height: 1030)
+            Image("Mac_background").resizable()
+                .scaleEffect(1.01)
+                .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
             
             Rectangle().foregroundColor(.yellow).frame(width: 400, height: 400)
             

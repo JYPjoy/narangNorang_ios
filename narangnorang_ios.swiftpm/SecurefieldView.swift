@@ -14,7 +14,9 @@ struct SecurefieldView: View {
     
     var body: some View {
         ZStack{
-            Image("Background")
+            Image("Background").resizable()
+                .scaleEffect(1.1)
+                .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
             
                 VStack(spacing: 20){
                     Spacer()
