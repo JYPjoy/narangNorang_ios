@@ -15,6 +15,7 @@ struct SceneOneView: View {
             VStack {
                 coordinator.navigationLinkSection()
                 Text("첫 번째 씬입니다.")
+    
                 Button {
                     coordinator.push(destination: .sceneTwoView)
                 } label: {
