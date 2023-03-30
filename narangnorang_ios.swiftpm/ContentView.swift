@@ -1,12 +1,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
         //IntroPageView()
         NavigationView{
             SceneOneView()
+                .navigationBarBackButtonHidden(true)
+            
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(.stack)
+  
+        //.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
