@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ClueOnTable_Table: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
             Image("ClueOnTable_Table")
                 .resizable()
                 .scaledToFit()
+        }
+        .onTapGesture {
+            coordinator.push(destination: .ontheTableView)
         }
     }
 }

@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct MacView: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle().ignoresSafeArea()
             
-            Image("Mac_background 1").resizable()
+            Image("Mac_background").resizable()
                 .scaledToFit()
             
             Rectangle().foregroundColor(.yellow).frame(width: 400, height: 400)
@@ -21,6 +23,9 @@ struct MacView: View {
                 Text("멀티탭 보관함을").font(.custom("BlackHanSans-Black", size: 55))
                 Text("열어보시오").font(.custom("BlackHanSans-Black", size: 55))
             }
+        }
+        .onTapGesture {
+            coordinator.push(destination: .mainLabTable_Box)
         }
     }
 }

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct MainLabINDoorView: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle().ignoresSafeArea()
             Image("MainLabInDoor").resizable()
                 .scaledToFit()
+        }
+        .onTapGesture {
+            coordinator.push(destination: .mainLabTableView)
         }
     }
 }

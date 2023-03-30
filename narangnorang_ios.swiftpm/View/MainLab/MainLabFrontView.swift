@@ -18,7 +18,7 @@ struct MainLabFrontView: View {
                 .scaledToFit()
         }
         .onTapGesture {
-            coordinator.push(destination: .missionOneView)
+            coordinator.push(destination: .mainLabFrontDoorView)
         }
     }
 }

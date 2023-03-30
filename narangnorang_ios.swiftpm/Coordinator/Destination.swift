@@ -13,6 +13,21 @@ enum Destination {
     case missionTwoView
     case missionThreeView
     case mainLabFrontView
+    case mainLabView
+    case clueOnTable
+    case ontheTableView
+    case mainLabTablePolaroid
+    case polaroid
+    case mainLabMac
+    case secureFieldView
+    case macView
+    case mainLabTable_Box
+    case handLight
+    case handLight_Border
+    //TODO: 손전등 사라짐
+    case mainLabIndoorView
+    
+    case mainLabTableView
     case mainLabFrontDoorView
     case sceneFirstView
     case sceneOneView
@@ -32,6 +47,34 @@ enum Destination {
             MissionThreeView()
         case .mainLabFrontView:
             MainLabFrontView()
+        case .mainLabView:
+            MainLabView()
+        case .clueOnTable:
+            ClueOnTable_Table()
+        case .ontheTableView:
+            OntheTableView()
+        case .mainLabTablePolaroid:
+            MainLabTable_Polaroid()
+        case .polaroid:
+            PolaroidView()
+        case .mainLabMac:
+            MainLabTable_MacBook()
+        case .secureFieldView:
+            SecurefieldView()
+        case .macView:
+            MacView()
+        case .mainLabTable_Box:
+            MainLabTable_Box()
+        case .handLight:
+            HandLight()
+        case .handLight_Border:
+            HandLight_Border()
+        //###
+        case .mainLabIndoorView:
+            MainLabINDoorView()
+            
+        case .mainLabTableView:
+            MainLabTable()
         case .mainLabFrontDoorView:
             MainLabFrontDoorView()
         case .sceneFirstView:

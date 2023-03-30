@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct MainLabTable_Box: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
             Image("MainLabTable_Box")
                 .resizable()
                 .scaledToFit()
+        }
+        .onTapGesture {
+            coordinator.push(destination: .handLight)
         }
     }
 }

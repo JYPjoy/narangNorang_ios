@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct OntheTableView: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
-            
+            coordinator.navigationLinkSection()
             Rectangle().ignoresSafeArea()
             
             Image("Onthetable").resizable()
                 .scaledToFit()
+        }
+        .onTapGesture {
+            coordinator.push(destination: .mainLabTablePolaroid)
         }
     }
 }

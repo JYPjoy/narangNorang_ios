@@ -6,14 +6,18 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct SecurefieldView: View {
     
     let pass = "portfolio"
+    @StateObject var coordinator = Coordinator()
     @State private var password: String = ""
+    @State var audio : AVAudioPlayer!
     
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle().ignoresSafeArea()
             Image("LockScreen").resizable().scaledToFit()
             
@@ -29,6 +33,7 @@ struct SecurefieldView: View {
                     Button(action: {
                         if pass==password{
                             print("Correct!")
+                            coordinator.push(destination: .macView)
                         }else{
                             self.password = ""
                             print("Wrong!")
@@ -42,7 +47,14 @@ struct SecurefieldView: View {
                     }
                 }
         }
-                
+        .onAppear{
+            let song = NSDataAsset (name: "keyboard")
+            self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "mp3")
+            self.audio.play()
+        }
+        .onDisappear{
+            self.audio.stop()
+        }
 
     }
 }

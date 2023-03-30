@@ -30,6 +30,9 @@ struct MissionOneView: View {
         .onAppear{
             speechSynthesizer.speak(utterance)
         }
+        .onDisappear{
+            speechSynthesizer.stopSpeaking(at: .immediate)
+        }
         .onTapGesture {
             coordinator.push(destination: .missionTwoView)
         }

@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct HandLight_Border: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
             Image("HandLight_Border")
                 .resizable()
                 .scaledToFit()
                 .brightness(0.12)
+        }
+        .onTapGesture {
+            //coordinator.push(destination: .handLight)
         }
     }
 }

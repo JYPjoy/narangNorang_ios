@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HandLight: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
+        coordinator.navigationLinkSection()
         ZStack{
             Rectangle()
                 .ignoresSafeArea()
@@ -16,6 +18,9 @@ struct HandLight: View {
                 .resizable()
                 .scaledToFit()
                 .brightness(0.12)
+        }
+        .onTapGesture {
+            coordinator.push(destination: .handLight_Border)
         }
     }
 }

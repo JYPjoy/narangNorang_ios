@@ -1,29 +1,30 @@
 //
-//  MainLabView.swift
-//  narangnorang_ios
+//  SwiftUIView.swift
+//  
 //
-//  Created by 김용주 on 2023/03/30.
+//  Created by Joy on 2023/03/31.
 //
 
 import SwiftUI
 
-struct MainLabView: View {
+struct PolaroidView: View {
     @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
             coordinator.navigationLinkSection()
             Rectangle().ignoresSafeArea()
-            Image("MainLab_In").resizable()
+            
+            Image("polaroid").resizable()
                 .scaledToFit()
         }
         .onTapGesture {
-            coordinator.push(destination: .clueOnTable)
+            coordinator.push(destination: .mainLabMac)
         }
     }
 }
 
-struct MainLabView_Previews: PreviewProvider {
+struct PolaroidView_Previews: PreviewProvider {
     static var previews: some View {
-        MainLabView().previewInterfaceOrientation(.landscapeLeft)
+        PolaroidView().previewInterfaceOrientation(.landscapeLeft)
     }
 }

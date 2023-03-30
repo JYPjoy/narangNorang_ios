@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct MainLabTable_MacBook: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
             Image("MainLabTable_MacBook")
                 .resizable()
                 .scaledToFit()
+        }
+        .onTapGesture {
+            coordinator.push(destination: .secureFieldView)
         }
     }
 }

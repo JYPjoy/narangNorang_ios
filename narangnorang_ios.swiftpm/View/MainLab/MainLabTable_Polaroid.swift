@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct MainLabTable_Polaroid: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
             Image("MainLabTable_Polaroid")
                 .resizable()
                 .scaledToFit()
-        }    }
+        }
+        .onTapGesture {
+            coordinator.push(destination: .polaroid)
+        }
+        
+    }
 }
 
 struct MainLabTable_Polaroid_Previews: PreviewProvider {
