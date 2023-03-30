@@ -25,11 +25,8 @@ struct SceneFifteenView: View {
                 
                 ZStack{
                     Circle()
-                    
-                    
                         .frame(width: 300, height: 300)
                         .offset(x: self.currentPosition.width, y: self.currentPosition.height)
-                    
                         .gesture(
                             DragGesture()
                                 .onChanged { value in
