@@ -10,12 +10,13 @@ import SwiftUI
 struct SceneFiveView: View {
         var body: some View {
             ZStack{
+                Rectangle()
+                    .ignoresSafeArea()
                 Image("lock")
                     .resizable()
-                    .frame(width: 1250, height: 850)
-                   // .scaleEffect(1.1)
-                   //.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                    //.ignoresSafeArea()
+                    .scaledToFit()
+                   
+                 
             }
 
     }
