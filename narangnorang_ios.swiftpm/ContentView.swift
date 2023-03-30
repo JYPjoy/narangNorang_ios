@@ -1,23 +1,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            // switch
-            // brown
-            Image(systemName: "globe")
-                .font(.system(size: 40))
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-                .font(.system(size: 40, weight: .bold, design: .rounded))
+        //IntroPageView()
+        NavigationView{
+            SceneOneView()
+                .navigationBarBackButtonHidden(true)
+            
         }
+        //.navigationViewStyle(.stack)
+  
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
-struct ContentView_Preview: PreviewProvider{
+struct ContentView_Previews: PreviewProvider{
     static var previews: some View{
         ContentView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
+
+
