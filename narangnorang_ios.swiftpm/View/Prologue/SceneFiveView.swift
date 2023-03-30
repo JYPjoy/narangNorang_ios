@@ -15,10 +15,7 @@ struct SceneFiveView: View {
                 Image("lock")
                     .resizable()
                     .scaledToFit()
-                   
-                 
             }
-
     }
 }
 

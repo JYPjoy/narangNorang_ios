@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct MainLabFrontView: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle().ignoresSafeArea()
-            Image("MainLab").resizable()
+            Image("MainLab")
+                .resizable()
                 .scaledToFit()
+        }
+        .onTapGesture {
+            coordinator.push(destination: .missionOneView)
         }
     }
 }

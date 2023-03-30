@@ -13,7 +13,7 @@ fileprivate extension Notification.Name {
 }
 
 final class Coordinator: ObservableObject {
-  private var destination: Destination = .sceneOneView
+    private var destination: Destination = .prologueHand//.sceneOneView
   private let isRoot: Bool
   private var cancellable: Set<AnyCancellable> = []
   @Published private var navigationTrigger = false

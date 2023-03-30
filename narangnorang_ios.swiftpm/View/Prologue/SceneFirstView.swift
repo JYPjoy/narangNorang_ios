@@ -12,7 +12,7 @@ struct SceneFirstView: View {
             ZStack{
                 Rectangle()
                     .ignoresSafeArea()
-                Image("main")
+                Image("lock")
                     .resizable()
                     .scaledToFit()
  

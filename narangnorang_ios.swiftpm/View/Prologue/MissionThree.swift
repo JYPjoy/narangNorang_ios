@@ -2,32 +2,31 @@
 //  SwiftUIView.swift
 //  
 //
-//  Created by OLING on 2023/03/30.
+//  Created by Joy on 2023/03/31.
 //
 
 import SwiftUI
 
-struct PrologueHand: View {
-    @StateObject var coordinator = Coordinator(isRoot: true)
-    
+struct MissionThreeView: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
             coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
-            Image("Olilng_Hand 2")
+            Image("lock")
                 .resizable()
                 .scaledToFit()
         }
         .onTapGesture {
-            coordinator.push(destination: .missionOneView)
+            coordinator.push(destination: .mainLabFrontView)
         }
     }
 }
 
-struct PrologueHand_Previews: PreviewProvider {
+struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        PrologueHand()
+        MissionThreeView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
