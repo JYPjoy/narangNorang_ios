@@ -39,13 +39,16 @@ struct SceneFifteenView: View {
                         )
                         .onTapGesture {
                             self.scaleInOut = true
+                            coordinator.push(destination: .sceneSixteenView)
                         }
                         .blendMode(.destinationOut)
                 }
                 .scaleEffect(scaleInOut ? 15: 1)
                 .animation(Animation.easeInOut.speed(1/8),value: scaleInOut)
+                .onLongPressGesture {
+                    coordinator.push(destination: .sceneSixteenView)
+                }
             }
-            
             .compositingGroup()
             
         }

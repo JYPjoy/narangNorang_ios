@@ -10,6 +10,8 @@ import AVFoundation
 
 struct SceneOneView: View {
     @StateObject var coordinator = Coordinator(isRoot: true)
+    @State private var shouldAnimate = false
+    @State var audio : AVAudioPlayer!
         
     var body: some View {
         let speechSynthesizer = AVSpeechSynthesizer()
@@ -40,8 +42,35 @@ struct SceneOneView: View {
             } label: {
                 Text("음성 시리 안내입니다.")
             }
+            
+            Button {
+                shouldAnimate.toggle()
+                if shouldAnimate{
+                    playSound(sound: "doorlock", type: "mp3")
+                }else{
+                    audioPlayer?.stop()
+                }
+            } label: {
+                Text("음악을 재생합니다.")
+            }
+
 
         }
+        .onAppear{
+            let song = NSDataAsset (name: "keyboard")
+            self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "mp3")
+            self.audio.play()
+        }
+        .onDisappear{
+            self.audio.stop()
+        }
         
+    }
+}
+
+struct SceneOneView_Previews: PreviewProvider {
+    static var previews: some View {
+        SceneOneView()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
