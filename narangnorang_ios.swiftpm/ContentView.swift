@@ -4,7 +4,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             // switch
-            // switch
+            // brown
             Image(systemName: "globe")
                 .font(.system(size: 40))
                 .imageScale(.large)
