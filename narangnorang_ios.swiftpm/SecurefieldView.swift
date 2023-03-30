@@ -22,9 +22,10 @@ struct SecurefieldView: View {
                     Text("Oling").font(.system(size: 60)).foregroundColor(Color.orange)
                     Spacer().frame(height: 50)
                 
-                    SecureField("비밀번호", text: $password)
+                    SecureField("Password", text: $password)
                         .textFieldStyle(RoundedBorderTextFieldStyle()).textInputAutocapitalization(.never).privacySensitive().frame(width: 350)
                     
+                    //화면전환
                     Button(action: {
                         if pass==password{
                             print("Correct!")
