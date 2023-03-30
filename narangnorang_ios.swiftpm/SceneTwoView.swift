@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct SceneTwoView: View {
-        var body: some View {
-            Image("photo1")
-                .resizable()
-                .frame(width: 1400, height: 1150)
+    var body: some View {
+        ZStack{
+            Rectangle()
                 .ignoresSafeArea()
-
+            Image("Olilng_Hand 2")
+                .resizable()
+                .scaledToFit()
+        }
     }
 }
+
 
 struct SceneTwoView_Previews: PreviewProvider{
     static var previews: some View {
