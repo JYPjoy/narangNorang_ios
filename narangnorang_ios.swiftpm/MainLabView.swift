@@ -13,7 +13,6 @@ struct MainLabView: View {
             Rectangle().ignoresSafeArea()
             Image("MainLab_In").resizable()
                 .scaledToFit()
-                
         }
     }
 }

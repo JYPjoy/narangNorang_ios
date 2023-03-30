@@ -11,10 +11,8 @@ struct MainLabFrontView: View {
     var body: some View {
         ZStack{
             Rectangle().ignoresSafeArea()
-            Image("MainLabFront").resizable()
+            Image("MainLab").resizable()
                 .scaledToFit()
-                
-
         }
     }
 }
