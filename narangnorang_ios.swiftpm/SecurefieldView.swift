@@ -14,12 +14,10 @@ struct SecurefieldView: View {
     
     var body: some View {
         ZStack{
-            Image("Background").resizable()
-                .scaleEffect(1.1)
-                .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+            Rectangle().ignoresSafeArea()
+            Image("LockScreen").resizable().scaledToFit()
             
                 VStack(spacing: 20){
-                    Spacer()
                     Circle().foregroundColor(.orange).frame(width: 250)
                     Text("Oling").font(.system(size: 60)).foregroundColor(Color.orange)
                     Spacer().frame(height: 50)
@@ -42,7 +40,6 @@ struct SecurefieldView: View {
                             .foregroundColor(.secondary)
                         
                     }
-                    Spacer()
                 }
         }
                 

@@ -10,9 +10,9 @@ import SwiftUI
 struct MainLabView: View {
     var body: some View {
         ZStack{
+            Rectangle().ignoresSafeArea()
             Image("MainLab_In").resizable()
-                .scaleEffect(1.01)
-                .frame(width:UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+                .scaledToFit()
                 
         }
     }
