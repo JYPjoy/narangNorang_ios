@@ -11,6 +11,7 @@ enum Destination {
     case sceneOneView
     case sceneTwoView
     case sceneThreeView
+    case sceneFifteenView
     
     @ViewBuilder
     var view: some View {
@@ -21,6 +22,8 @@ enum Destination {
             SceneTwoView()
         case .sceneThreeView:
             SceneThreeView()
+        case .sceneFifteenView:
+            SceneFifteenView()
         }
     }
 }
