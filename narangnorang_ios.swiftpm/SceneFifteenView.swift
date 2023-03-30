@@ -20,13 +20,15 @@ struct SceneFifteenView: View {
             Image("table")
                 .resizable()
                 .frame(width: 1200, height:1000)
-                .position(x: 1020, y: 660)
-                .onTapGesture {
+                .position(x: 1020, y: 660) //시간 된다면 상대 좌표로 바꾸는 게 좋을 듯
+                .onTapGesture{
                     scaleInOut.toggle()
                 }
                 .scaleEffect(scaleInOut ? 1.1: 1)
                 .animation(Animation.easeInOut.speed(1/4),value: scaleInOut)
-            
+                .onLongPressGesture {
+                    coordinator.push(destination: .sceneSixteenView)
+                }
         }
         .ignoresSafeArea()
     }
