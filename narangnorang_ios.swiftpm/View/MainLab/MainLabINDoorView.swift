@@ -17,7 +17,7 @@ struct MainLabINDoorView: View {
                 .scaledToFit()
         }
         .onTapGesture {
-            coordinator.push(destination: .mainLabTableView)
+            coordinator.push(destination: .hallway)
         }
     }
 }

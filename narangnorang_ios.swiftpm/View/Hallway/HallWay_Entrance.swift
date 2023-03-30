@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct HallWay_Entrance: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
             Image("HallWay_Entrance")
                 .resizable()
                 .scaledToFit()
                 .brightness(0.05)
+        }
+        .onTapGesture {
+            coordinator.push(destination: .cafeteriaView)
         }
     }
 }

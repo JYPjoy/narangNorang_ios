@@ -17,8 +17,11 @@ struct CafeteriaView: View {
     var body: some View {
         ZStack{
             coordinator.navigationLinkSection()
-            Image("cafeteria")
+            
+            Image("cafeteria0")
                 .resizable()
+                .scaledToFit()
+                .brightness(0.3)
             
             ZStack {
                 Rectangle()
@@ -39,21 +42,25 @@ struct CafeteriaView: View {
                         )
                         .onTapGesture {
                             self.scaleInOut = true
-                            coordinator.push(destination: .secondQuizView)
+                            DispatchQueue.main.asyncAfter(deadline: .now()+1){
+                                coordinator.push(destination: .cafeteriaTableView)
+                            }
                         }
                         .blendMode(.destinationOut)
                 }
                 .scaleEffect(scaleInOut ? 15: 1)
                 .animation(Animation.easeInOut.speed(1/8),value: scaleInOut)
-                .onLongPressGesture {
-                    coordinator.push(destination: .secondQuizView)
-                }
+         
             }
             .compositingGroup()
-            
+            .opacity(0.8)
+
         }
-        .opacity(0.8)
+        .background(.black)
         .ignoresSafeArea()
+//        .onLongPressGesture {
+//            coordinator.push(destination: .cafeteriaTableView)
+//        }
     }}
 
 struct CafeteriaView_Previews: PreviewProvider {

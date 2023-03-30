@@ -20,7 +20,7 @@ struct HandLight_Border: View {
                 .brightness(0.12)
         }
         .onTapGesture {
-            //coordinator.push(destination: .handLight)
+            coordinator.push(destination: .mainLabIndoorView)
         }
     }
 }

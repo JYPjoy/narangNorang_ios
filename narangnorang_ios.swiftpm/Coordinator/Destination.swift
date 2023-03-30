@@ -26,12 +26,16 @@ enum Destination {
     case handLight_Border
     //TODO: 손전등 사라짐
     case mainLabIndoorView
+    case hallway
+    case hallway_entrance
+    case cafeteriaView
+    case cafeteriaTableView
     
     case mainLabTableView
     case mainLabFrontDoorView
     case sceneFirstView
     case sceneOneView
-    case cafeteriaView
+
     case secondQuizView
     
     @ViewBuilder
@@ -69,9 +73,17 @@ enum Destination {
             HandLight()
         case .handLight_Border:
             HandLight_Border()
-        //###
+        //TODO: 손전등 사라짐
         case .mainLabIndoorView:
             MainLabINDoorView()
+        case .hallway:
+            HallWay()
+        case .hallway_entrance:
+            HallWay_Entrance()
+        case .cafeteriaView:
+            CafeteriaView()
+        case .cafeteriaTableView:
+            CafeteriaTableView()
             
         case .mainLabTableView:
             MainLabTable()
@@ -81,8 +93,7 @@ enum Destination {
             SceneFirstView()
         case .sceneOneView:
             SceneOneView()
-        case .cafeteriaView:
-            CafeteriaView()
+    
         case .secondQuizView:
             SecondQuizView()
         }
