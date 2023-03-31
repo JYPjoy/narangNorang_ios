@@ -17,6 +17,7 @@ struct CompletedPuzzleView: View {
                 .scaledToFit()
 
         }
+        .frame(width: UIScreen.main.bounds.width)
         .onTapGesture {
             coordinator.push(destination: .hallwayLockerEntrance)
         }

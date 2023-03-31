@@ -76,11 +76,11 @@ struct LastPassword: View {
     var submitButton : some View {
         Button {
             if passwordTryString == passwordAnswer {
-                let song = NSDataAsset (name: "keyboard")
-                self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "mp3")
+                let song = NSDataAsset (name: "doorlock1")
+                self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "m4a")
                 self.audio.play()
                 
-                DispatchQueue.main.asyncAfter(deadline: .now()+1){
+                DispatchQueue.main.asyncAfter(deadline: .now()+3){
                     self.audio.stop()
                     coordinator.push(destination: .escapedView)
                 }
