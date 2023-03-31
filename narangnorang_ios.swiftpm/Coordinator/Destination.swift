@@ -32,6 +32,13 @@ enum Destination {
     case cafeteriaView
     case cafeteriaTableView
     case rippedPaperView
+    case puzzleView
+    case completedPuzzle
+    case hallwayLockerEntrance
+    case hallwayLocker
+    case lockerView
+    case postit
+    case thirdQuizView
     
     case mainLabTableView
     case mainLabFrontDoorView
@@ -88,15 +95,27 @@ enum Destination {
             CafeteriaTableView()
         case .rippedPaperView:
             RippedPaperView()
+        case .puzzleView:
+            PuzzleView()
+        case .completedPuzzle:
+            CompletedPuzzleView()
+        case .hallwayLockerEntrance:
+            HallWay_Locker_Entrance()
+        case .hallwayLocker:
+            HallWay_Locker()
+        case .lockerView:
+            LockerView()
+        case .postit:
+            PostitView()
+        case .thirdQuizView:
+            ThirdQuizView()
             
         case .mainLabTableView:
             MainLabTable()
         case .mainLabFrontDoorView:
             MainLabFrontDoorView()
-  
         case .sceneOneView:
             SceneOneView()
-    
         case .secondQuizView:
             SecondQuizView()
         }

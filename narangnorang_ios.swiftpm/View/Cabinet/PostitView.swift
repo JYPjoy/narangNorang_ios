@@ -7,30 +7,26 @@
 
 import SwiftUI
 
-struct RippedPaperView: View {
+struct PostitView: View {
     @StateObject var coordinator = Coordinator()
-    
     var body: some View {
         ZStack{
+            Rectangle()
+                .ignoresSafeArea()
             coordinator.navigationLinkSection()
-            Image("paper0")
+            Image("postit")
                 .resizable()
                 .scaledToFit()
         }
-        .background(
-            Rectangle()
-                .fill(.black)
-                .scaledToFill()
-        )
         .onTapGesture {
-            coordinator.push(destination: .puzzleView)
+            coordinator.push(destination: .thirdQuizView)
         }
     }
 }
 
-struct RippedPaperView_Previews: PreviewProvider {
+struct PostitView_Previews: PreviewProvider {
     static var previews: some View {
-        RippedPaperView()
+        PostitView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct HallWay_Locker: View {
+    @StateObject var coordinator = Coordinator()
     var body: some View {
         ZStack{
+            coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
             Image("HallWay_Locker")
                 .resizable()
                 .scaledToFit()
                 .brightness(0.05)
+        }
+        .onTapGesture {
+            coordinator.push(destination: .lockerView)
         }
     }
 }

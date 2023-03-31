@@ -7,30 +7,27 @@
 
 import SwiftUI
 
-struct RippedPaperView: View {
+struct HallWay_Locker_Entrance: View {
     @StateObject var coordinator = Coordinator()
-    
     var body: some View {
         ZStack{
             coordinator.navigationLinkSection()
-            Image("paper0")
+            Rectangle()
+                .ignoresSafeArea()
+            Image("HallWay")
                 .resizable()
                 .scaledToFit()
+                .brightness(0.05)
         }
-        .background(
-            Rectangle()
-                .fill(.black)
-                .scaledToFill()
-        )
         .onTapGesture {
-            coordinator.push(destination: .puzzleView)
+            coordinator.push(destination: .hallwayLocker)
         }
     }
 }
 
-struct RippedPaperView_Previews: PreviewProvider {
+struct HallWay_Locker_Entrance_Previews: PreviewProvider {
     static var previews: some View {
-        RippedPaperView()
+        HallWay_Locker_Entrance()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }
