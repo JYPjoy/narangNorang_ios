@@ -39,10 +39,12 @@ enum Destination {
     case lockerView
     case postit
     case thirdQuizView
+    case lastPassWord
+    case escapedView
+    case narangnorang
     
     case mainLabTableView
     case mainLabFrontDoorView
-    case sceneOneView
     case secondQuizView
     
     @ViewBuilder
@@ -109,13 +111,18 @@ enum Destination {
             PostitView()
         case .thirdQuizView:
             ThirdQuizView()
+        case .lastPassWord:
+            LastPassword()
+        case .escapedView:
+            EscapedView()
+        case .narangnorang:
+            Narangnorang_teamView()
             
         case .mainLabTableView:
             MainLabTable()
         case .mainLabFrontDoorView:
             MainLabFrontDoorView()
-        case .sceneOneView:
-            SceneOneView()
+ 
         case .secondQuizView:
             SecondQuizView()
         }

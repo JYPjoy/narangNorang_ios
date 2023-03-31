@@ -13,7 +13,7 @@ struct SecurefieldView: View {
     let pass = "portfolio"
     @StateObject var coordinator = Coordinator()
     @State private var password: String = ""
-    @State var audio : AVAudioPlayer!
+    @State private var audio : AVAudioPlayer!
     
     var body: some View {
         ZStack{

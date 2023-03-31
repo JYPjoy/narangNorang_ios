@@ -24,7 +24,7 @@ struct ThirdQuizView: View {
                 print(buttonPressedCount)
                 
                 if buttonPressedCount > 4 {
-                    coordinator.push(destination: .rippedPaperView)
+                    coordinator.push(destination: .lastPassWord)
                 }
                 
             } label: {
@@ -70,11 +70,6 @@ struct ThirdQuizView: View {
             }
         }
         .ignoresSafeArea()
-        //TODO: 화면 전환 
-//        .onLongPressGesture{
-//            coordinator.push(destination: .rippedPaperView)
-//        }
-        
     }
 }
 

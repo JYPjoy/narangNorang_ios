@@ -6,13 +6,16 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct LastPassword: View {
-
+    @StateObject var coordinator = Coordinator()
     @State var passwordCount: Int = 0
     let passwordAnswer: String = "4213"
     @State var passwordTry: Array<Int> = []
     @State var passwordTryString : String = ""
+    @State private var audio : AVAudioPlayer!
+    
     let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 1, alignment: nil),
         GridItem(.flexible(), spacing: 1, alignment: nil),
@@ -20,6 +23,7 @@ struct LastPassword: View {
     ]
     var body: some View {
         ZStack {
+            coordinator.navigationLinkSection()
             Color.black
             Image("DSC06190")
                 .resizable()
@@ -33,6 +37,8 @@ struct LastPassword: View {
         }
         .ignoresSafeArea()
     }
+    
+    
     var keyPad : some View {
         LazyVGrid(
             columns: columns,
@@ -70,8 +76,14 @@ struct LastPassword: View {
     var submitButton : some View {
         Button {
             if passwordTryString == passwordAnswer {
-                print("다음화면으로 이동")
-                //TODO: 화면 전환 - 다음화면으로 넘어가는 코드
+                let song = NSDataAsset (name: "keyboard")
+                self.audio = try! AVAudioPlayer(data: song!.data, fileTypeHint: "mp3")
+                self.audio.play()
+                
+                DispatchQueue.main.asyncAfter(deadline: .now()+1){
+                    self.audio.stop()
+                    coordinator.push(destination: .escapedView)
+                }
             }
             passwordCount = 0
             passwordTry = []
