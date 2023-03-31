@@ -14,7 +14,7 @@ struct HallWay_Entrance: View {
             coordinator.navigationLinkSection()
             Rectangle()
                 .ignoresSafeArea()
-            Image("HallWay_Entrance")
+            Image("HallWay_Entrance 1")
                 .resizable()
                 .scaledToFit()
                 .brightness(0.05)
