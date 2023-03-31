@@ -7,23 +7,27 @@
 
 import SwiftUI
 
-struct SceneFirstView: View {
+struct OpeningView: View {
+    @StateObject var coordinator = Coordinator()
         var body: some View {
             ZStack{
+                coordinator.navigationLinkSection()
                 Rectangle()
                     .ignoresSafeArea()
-                Image("lock")
+                Image("Opening")
                     .resizable()
                     .scaledToFit()
  
             }
-
+            .onTapGesture {
+                coordinator.push(destination: .prologueHand)
+            }
     }
 }
 
-struct SceneFirstView_Previews: PreviewProvider{
+struct OpeningView_Previews: PreviewProvider{
     static var previews: some View {
-        SceneFirstView()
+        OpeningView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

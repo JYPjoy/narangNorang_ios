@@ -8,6 +8,7 @@
 import SwiftUI
 
 enum Destination {
+    case openingView
     case prologueHand
     case missionOneView
     case missionTwoView
@@ -30,17 +31,18 @@ enum Destination {
     case hallway_entrance
     case cafeteriaView
     case cafeteriaTableView
+    case rippedPaperView
     
     case mainLabTableView
     case mainLabFrontDoorView
-    case sceneFirstView
     case sceneOneView
-
     case secondQuizView
     
     @ViewBuilder
     var view: some View {
         switch self {
+        case .openingView:
+            OpeningView()
         case .prologueHand:
             PrologueHand()
         case .missionOneView:
@@ -84,13 +86,14 @@ enum Destination {
             CafeteriaView()
         case .cafeteriaTableView:
             CafeteriaTableView()
+        case .rippedPaperView:
+            RippedPaperView()
             
         case .mainLabTableView:
             MainLabTable()
         case .mainLabFrontDoorView:
             MainLabFrontDoorView()
-        case .sceneFirstView:
-            SceneFirstView()
+  
         case .sceneOneView:
             SceneOneView()
     

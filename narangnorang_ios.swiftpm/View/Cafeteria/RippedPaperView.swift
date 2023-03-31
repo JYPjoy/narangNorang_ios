@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct CafeteriaTableView: View {
+struct RippedPaperView: View {
     @StateObject var coordinator = Coordinator()
     
     var body: some View {
         ZStack{
             coordinator.navigationLinkSection()
-            Image("cafeteria1")
+            Image("paper0")
                 .resizable()
                 .scaledToFit()
         }
@@ -23,14 +23,14 @@ struct CafeteriaTableView: View {
                 .scaledToFill()
         )
         .onTapGesture {
-            coordinator.push(destination: .rippedPaperView)
+            
         }
     }
 }
 
-struct CafeteriaTableView_Previews: PreviewProvider {
+struct RippedPaperView_Previews: PreviewProvider {
     static var previews: some View {
-        CafeteriaTableView()
+        RippedPaperView()
             .previewInterfaceOrientation(.landscapeLeft)
     }
 }

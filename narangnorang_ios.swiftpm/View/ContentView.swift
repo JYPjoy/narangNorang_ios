@@ -4,7 +4,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             //SceneOneView()
-            PrologueHand()
+            //PrologueHand()
+            OpeningView()
                 //.navigationBarBackButtonHidden(true)
         }
         //.navigationViewStyle(.stack)
