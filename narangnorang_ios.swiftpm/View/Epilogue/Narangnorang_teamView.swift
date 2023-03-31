@@ -11,14 +11,12 @@ struct Narangnorang_teamView: View {
 
     var body: some View {
         ZStack{
+            Rectangle()
+                .ignoresSafeArea()
             Image("team_narangnorang")
                 .resizable()
-//                .ignoresSafeArea()
                 .scaledToFit()
- 
         }
-        .scaleEffect(1.1)
-        .ignoresSafeArea()
     }
 }
 
