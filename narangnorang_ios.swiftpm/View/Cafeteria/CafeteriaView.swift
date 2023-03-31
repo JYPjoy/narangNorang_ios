@@ -42,7 +42,7 @@ struct CafeteriaView: View {
                         )
                         .onTapGesture {
                             self.scaleInOut = true
-                            DispatchQueue.main.asyncAfter(deadline: .now()+2){
+                            DispatchQueue.main.asyncAfter(deadline: .now()+1){
                                 coordinator.push(destination: .cafeteriaTableView)
                             }
                         }

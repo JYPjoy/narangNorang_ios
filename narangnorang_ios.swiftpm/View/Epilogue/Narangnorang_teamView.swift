@@ -17,7 +17,7 @@ struct Narangnorang_teamView: View {
                 .scaledToFit()
  
         }
-        .scaleEffect(1.05)
+        .scaleEffect(1.1)
         .ignoresSafeArea()
     }
 }

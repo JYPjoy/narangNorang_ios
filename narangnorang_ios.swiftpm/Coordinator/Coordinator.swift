@@ -35,7 +35,7 @@ final class Coordinator: ObservableObject {
   func navigationLinkSection() -> some View {
     NavigationLink(isActive: Binding<Bool>(get: getTrigger, set: setTrigger(newValue:))) {
       destination.view
-        .navigationBarBackButtonHidden(true)
+        //.navigationBarBackButtonHidden(true)
     } label: {
       EmptyView()
     }
