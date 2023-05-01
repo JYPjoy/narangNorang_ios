@@ -54,7 +54,7 @@ git push #Remote directory에 local directory에 올린 코드들을 업로드�
 git pull #Remote directory에 있는 코드들을 local로 가져올 수 있습니다.
 git branch 브랜치명 # 만일 develop 브랜치에서 git branch feat-joy 하면 develop 브랜치에서 feat-joy가 생성됩니다. 
 git merge 
-#만일 develop 브랜치에서 git merge feature-joy하면 feature-joy브랜치가 develop 브랜치로 머지됩니다.
+#만일 develop 브랜치에서 git merge feat-joy하면 feat-joy브랜치가 develop 브랜치로 머지됩니다.
 #하지만 머지는 꼭 미리 joy의 감독이 필요합니다!!!🤔
 ```
 
