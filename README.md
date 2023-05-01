@@ -1,15 +1,17 @@
 # 💡 소개
 @Apple Developer Academy-MC1 💛<b>나랑 노랑</b>💛 팀의 레포지토리입니다.<br/>
 방탈출 게임 포맷를 차용해 팀원들이 경험한 첫 CBL 이야기를 SwiftUI를 사용해 만들어 보았습니다.
+<br/>
 
 # 🔨 사용 기술 
 SwiftUI, AVFoundation, Coordinator Pattern
+<br/>
 
 # 👥 팀원
 |🐣 이놈무새|🐣 유재석무새|🐣 쉴까무새|🐣 아니무새|🐣 청학동무새|🐣 긍정무새|
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
 |[Joy(박지영)](https://github.com/JYPjoy)|[Oling(조예린)](https://github.com/OLING99)|[Brown(최영빈)](https://github.com/chldudqlsdl)|[Sean(배정훈)](https://github.com/nss321)|[Pin(김용주)](https://github.com/pingse)|[Guggim(고승빈)](https://github.com/GUGGIM)|
-
+<br/>
 
 # 📱 주요 화면
 |Screen1|Screen2|Screen3|
@@ -19,8 +21,7 @@ SwiftUI, AVFoundation, Coordinator Pattern
 |Screen4|Screen5|Screen6|
 |:-----:|:-----:|:-----:|
 |<img src = "./screenshots/screen4.png" width = "600" height = "200">|<img src = "./screenshots/screen5.png" width = "600" height = "200">|<img src = "./screenshots/screen6.png" width = "600" height = "200">|
-
-
+<br/>
 
 
 # 📈 Git-Flow
