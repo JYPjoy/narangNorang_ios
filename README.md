@@ -25,9 +25,9 @@ SwiftUI, AVFoundation, Coordinator Pattern
 
 # Git-Flow
 ## Git branch (Git-flow)
-- `master` : 제품을 배포하는 브랜치입니다. 🚨 절대 허락 없이 이 브랜치에서 <b>새로운 브랜치를 생성하지 마세요!!!!!</b> 🚨
+- `main` : 제품을 배포하는 브랜치입니다. 🚨 절대 허락 없이 이 브랜치에서 <b>새로운 브랜치를 생성하지 마세요!!!!!</b> 🚨
 - `develop` : 개발자들이 작업한 코드를 합치는 브랜치입니다.
-- `feature - 이름` : 예시로 `feature-joy` 로 브랜치를 생성하시면 됩니다.  `feature-이름`에서  작업한 작업물이 완료되면 develop으로 머지하시면 됩니다. 머지 전에 팀원들과 함께 진행 상황 꼭 공유하도록 하기!! MUST!! 🤔 
+- `feat - 이름` : 예시로 `feat-joy` 로 브랜치를 생성하시면 됩니다.  `feat-이름`에서  작업한 작업물이 완료되면 develop으로 머지하시면 됩니다. 머지 전에 팀원들과 함께 진행 상황 꼭 공유하도록 하기!! MUST!! 🤔 
 
 <img src="./git_flow.png" width="600" height="400">
 
