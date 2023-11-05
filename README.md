@@ -1,10 +1,10 @@
 # 💡 소개
 @Apple Developer Academy-MC1 💛<b>나랑 노랑</b>💛 팀의 레포지토리입니다.<br/>
-방탈출 게임 포맷를 차용해 팀원들이 경험한 첫 CBL 이야기를 SwiftUI를 사용해 만들어 보았습니다.
+방탈출 게임 포맷를 차용해 팀원들이 경험한 아카데미에서의 첫 프로젝트 이야기를 SwiftUI를 사용해 만들어 보았습니다.
 <br/>
 
 # 🔨 사용 기술 
-SwiftUI, AVFoundation, Coordinator Pattern
+SPM 파일, SwiftUI, AVFoundation, Coordinator Pattern
 <br/>
 
 # 👥 팀원
